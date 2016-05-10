@@ -1,0 +1,31 @@
+{
+  "name": "pbp",
+  "version": "0.0.1",
+  "description": "Personal boilerplate",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/af/pbp.git"
+  },
+  "keywords": [
+    "boilerplate"
+  ],
+  "author": "Aaron Franks (http://aaronfranks.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/af/pbp/issues"
+  },
+  "homepage": "https://github.com/af/pbp#readme",
+  "devDependencies": {
+    "eslint": "^2.9.0",
+    "react-hot-loader": "^3.0.0-beta.2",
+    "webpack": "^2.1.0-beta.7"
+  },
+  "dependencies": {
+    "react": "^15.0.2",
+    "react-dom": "^15.0.2"
+  }
+}
