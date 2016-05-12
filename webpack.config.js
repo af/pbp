@@ -6,8 +6,9 @@ var DEV_MODE = (process.env.NODE_ENV === 'development')
 module.exports = {
     entry: {
         app: [
-            'react-hot-loader/patch',
-            './js/entry.js'
+            './js/entry.js',
+            'webpack-hot-middleware/client',
+            'react-hot-loader/patch'
         ],
         vendor: ['react', 'react-dom'],
     },
@@ -20,6 +21,11 @@ module.exports = {
     module: {},
 
     plugins: [
+        // For https://www.npmjs.com/package/webpack-hot-middleware
+        new webpack.optimize.OccurrenceOrderPlugin(),
+        new webpack.HotModuleReplacementPlugin(),
+        new webpack.NoErrorsPlugin(),
+
         new webpack.optimize.CommonsChunkPlugin({ name: 'vendor', filename: 'vendor.js' })
     ]
 }
