@@ -1,5 +1,16 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
+import { render } from 'react-dom'
+import { AppContainer } from 'react-hot-loader'
 import App from './app'
 
-ReactDOM.render(React.createElement(App), document.querySelector('.app'))
+const rootEl = document.querySelector('.app')
+const $ = React.createElement
+
+render($(AppContainer, null, $(App)), rootEl)
+
+
+if (module.hot) {
+    module.hot.accept('./app', function() {
+        render($(AppContainer, null, $(App)), rootEl)
+    })
+}

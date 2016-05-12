@@ -6,9 +6,9 @@ var DEV_MODE = (process.env.NODE_ENV === 'development')
 module.exports = {
     entry: {
         app: [
-            './js/entry.js',
             'webpack-hot-middleware/client',
-            'react-hot-loader/patch'
+            'react-hot-loader/patch',
+            './js/entry.js'
         ],
         vendor: ['react', 'react-dom'],
     },
