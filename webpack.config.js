@@ -1,14 +1,14 @@
-var webpack = require('webpack')
-var path = require('path')
-var DEV_MODE = (process.env.NODE_ENV === 'development')
+const webpack = require('webpack')
+const path = require('path')
+const DEV_MODE = (process.env.NODE_ENV === 'development')
 
 
-module.exports = {
+const config = {
     entry: {
         app: [
             'webpack-hot-middleware/client',
             'react-hot-loader/patch',
-            './js/entry.js'
+            './ui/entry.js'
         ],
         vendor: ['react', 'react-dom'],
     },
@@ -29,3 +29,6 @@ module.exports = {
         new webpack.optimize.CommonsChunkPlugin({ name: 'vendor', filename: 'vendor.js' })
     ]
 }
+
+var addStyleConfig = require('stylepack')()
+module.exports = addStyleConfig(config)
