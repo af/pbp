@@ -4,6 +4,7 @@
   "description": "Personal boilerplate",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint .",
     "start": "node devserver.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
