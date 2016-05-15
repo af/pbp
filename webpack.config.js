@@ -1,5 +1,7 @@
-const webpack = require('webpack')
 const path = require('path')
+const webpack = require('webpack')
+const SvgStore = require('webpack-svgstore-plugin')
+
 const DEV_MODE = (process.env.NODE_ENV === 'development')
 
 
@@ -26,6 +28,11 @@ const config = {
         new webpack.HotModuleReplacementPlugin(),
         new webpack.NoErrorsPlugin(),
 
+        new SvgStore(
+            path.join(__dirname, 'public/svg/*.svg'),   // input path
+            'svg',                                      // output path
+            { name: '[hash].sprite.svg', chunk: 'app' } // options
+        ),
         new webpack.optimize.CommonsChunkPlugin({ name: 'vendor', filename: 'vendor.js' })
     ]
 }
