@@ -12,7 +12,7 @@ const config = {
             'react-hot-loader/patch',
             './ui/entry.js'
         ],
-        vendor: ['react', 'react-dom'],
+        vendor: ['react', 'react-dom', 'react-redux', 'redux'],
     },
     output: {
         path: path.join(__dirname, 'assets'),
