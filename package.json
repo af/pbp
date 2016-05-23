@@ -28,7 +28,7 @@
     "webpack": "2.1.0-beta.7",
     "webpack-dev-middleware": "1.6.1",
     "webpack-hot-middleware": "2.10.0",
-    "webpack-svgstore-plugin": "af/webpack-svgstore-plugin#webpack2"
+    "webpack-svgstore-plugin": "2.2.2"
   },
   "dependencies": {
     "react": "15.0.2",
