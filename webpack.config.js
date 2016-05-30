@@ -39,7 +39,10 @@ const config = {
                 }
             }
         ),
-        new webpack.optimize.CommonsChunkPlugin({ name: 'vendor', filename: 'vendor.js' })
+        new webpack.optimize.CommonsChunkPlugin({ name: 'vendor', filename: 'vendor.js' }),
+        new webpack.DefinePlugin({
+            'process.env': { NODE_ENV: JSON.stringify(process.env.NODE_ENV) }
+        })
     ]
 }
 
